@@ -1,0 +1,159 @@
+.header {
+  padding: 20px 0 55px;
+  background-color: $color_mediumgray;
+  color: #ffffff;
+  @include media-large {
+    padding: 20px 0 130px;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    margin-right: 20px;
+    @include media-xl {
+      margin-right: 10px;
+    }
+    @include media-large {
+      margin: 0 auto;
+    }
+  }
+  &-btn__order {
+    margin-right: 15px;
+    @include media-large {
+      display: none;
+    }
+  }
+}
+
+.header-search {
+  position: relative;
+  margin-right: 35px;
+  width: 230px;
+  flex: none;
+  @include media-xl {
+    margin-right: 15px;
+  }
+  @include media-large {
+    display: none;
+  }
+  &__field, &__submit {
+    border-radius: 5px;
+  }
+  &__field {
+    padding: 15px 50px 15px 10px;
+    width: 100%;
+    color: #ffffff;
+    background-color: $color_brightgray;
+    box-shadow: 0 0 0 1px $color_trout;
+    @include placeholder {
+      color: $color_palesky;
+    }
+  }
+  &__submit {
+    padding: 0;
+    @include size(36px);
+    @include position(absolute, $top: 5px, $right: 5px, $bottom: 5px);
+    background-color: $color_accent;
+    transition: transform .3s, background-color .3s;
+    .icon-search {
+      @include size(18px);
+      fill: #fff;
+      transition: transform .3s;
+    }
+    &:hover {
+      background-color: lighten($color_accent, 15%);
+      .icon-search {
+        transform: scale(1.1);
+      }
+    }
+    &:active {
+      background-color: darken($color_accent, 5%);
+      transform: scale(.9);
+    }
+  }
+}
+
+.header-nav {
+  display: flex;
+  @include media-xl {
+    margin: 0 auto;
+  }
+  @include media-large {
+    display: none;
+  }
+  &__link {
+    margin-right: 30px;
+    @include rem(14);
+    @include media-xl {
+      margin-right: 15px;
+    }
+  }
+}
+
+.header-user {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  @include media-large {
+    margin-left: 0;
+  }
+  &__notification {
+    margin-right: 30px;
+    padding: 0;
+    background-color: transparent;
+    @include media-xl {
+      margin-right: 10px;
+    }
+    @include media-large {
+      display: none;
+    }
+    .icon-bell {
+      @include size(22px, 27px);
+      fill: $color_shuttlegray;
+      transition: fill .3s, transform .3s;
+      @include media-large {
+        display: none;
+      }
+    }
+    &:hover .icon-bell {
+      fill: lighten($color_accent, 15%);
+    }
+    &:active .icon-bell {
+      fill: darken($color_accent, 5%);
+      transform: scale(.9);
+    }
+  }
+  &__money {
+    @include media-large {
+      display: none;
+    }
+    &:not(:last-of-type) {
+      margin-right: 10px;
+      @include media-xl {
+        margin-right: 5px;
+      }
+    }
+    .icon-coins {
+      @include size(16px, 12px);
+      margin-right: 10px;
+      @include media-xl {
+        margin-right: 5px;
+      }
+      fill: #fff;
+      &.gold {
+        fill: $lightning_yellow;
+      }
+    }
+    span {
+      font-size: 13px;
+      @include rem(13);
+    }
+  }
+  &__avatar {
+    margin-left: 15px;
+    @include media-xl {
+      margin-left: 10px;
+    }
+  }
+}

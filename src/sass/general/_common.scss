@@ -1,0 +1,33 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $base_font_family;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input[type="text"], textarea, button {
+  outline: none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: $container_width;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  background-color: $color_сharade;
+}

@@ -1,0 +1,5 @@
+.logo {
+  &__img {
+    @include size(134px, 62px);
+  }
+}

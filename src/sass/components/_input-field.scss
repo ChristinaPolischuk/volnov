@@ -1,0 +1,16 @@
+.input-field {
+  font-size: 14px;
+  transition: box-shadow 0.3s;
+  &:focus {
+    box-shadow: 0px 0px 0px 1px $color_accent;
+    animation: anim-shadow 0.3s forwards;
+  }
+}
+
+@keyframes anim-shadow {
+  99% {
+    width: inherit;
+    box-shadow: 0px 0px 20px 2px $color_accent;
+    opacity: 1;
+  }
+}
